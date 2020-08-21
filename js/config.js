@@ -2,10 +2,10 @@ function setConfig() {
 
     let lang = document.querySelector('body > nav > a > img').alt;
 
-    var texts = {};
+    var configTexts = {};
 
     if (lang == "Brasil") {
-        texts = {
+        configTexts = {
             "title": "Controle de Compras",
             "desc": "Descrição",
             "amount": "Quantidade",
@@ -23,11 +23,12 @@ function setConfig() {
             "tableDesc": "Descrição",
             "tableAmount": "Quantidade",
             "tableValue": "Valor",
-            "tableAction": "Ação"
+            "tableAction": "Ação",
+            "descEmpty" : "A descrição não pode estar vazia"
         };
 
     } else {
-        texts = {
+        configTexts = {
             "title": "Shopping Control",
             "desc": "Description",
             "amount": "Amount",
@@ -45,45 +46,46 @@ function setConfig() {
             "tableDesc": "Description",
             "tableAmount": "Amount",
             "tableValue": "Value",
-            "tableAction": "Action"
+            "tableAction": "Action",
+            "descEmpty" : "Description cannot be empty"
         };
 
     }
 
-    document.title = texts.title;
-    document.querySelector("#navTitle").innerHTML = texts.title;
+    document.title = configTexts.title;
+    document.querySelector("#navTitle").innerHTML = configTexts.title;
 
-    document.querySelector("#desc").placeholder = texts.desc;
-    document.querySelector("#amount").placeholder = texts.amount;
-    document.querySelector("#value").placeholder = texts.value;
+    document.querySelector("#desc").placeholder = configTexts.desc;
+    document.querySelector("#amount").placeholder = configTexts.amount;
+    document.querySelector("#value").placeholder = configTexts.value;
 
-    document.querySelector("#btnSave").innerHTML = texts.btnSave;
-    document.querySelector("#btnClear").innerHTML = texts.btnClear;
-    document.querySelector("#btnCancel").innerHTML = texts.btnCancel;
+    document.querySelector("#btnSave").innerHTML = configTexts.btnSave;
+    document.querySelector("#btnClear").innerHTML = configTexts.btnClear;
+    document.querySelector("#btnCancel").innerHTML = configTexts.btnCancel;
 
-    document.querySelector("#btnAdd").innerHTML = texts.btnAdd;
-    document.querySelector("#btnReset").innerHTML = texts.btnClear;
-    document.querySelector("#btnDeleteAll").innerHTML = texts.btnDelList;
+    document.querySelector("#btnAdd").innerHTML = configTexts.btnAdd;
+    document.querySelector("#btnReset").innerHTML = configTexts.btnClear;
+    document.querySelector("#btnDeleteAll").innerHTML = configTexts.btnDelList;
 
     if ( document.querySelector("#tableDesc") != undefined ) {
 
-        document.querySelector("#tableDesc").innerHTML = texts.tableDesc;
-        document.querySelector("#tableAmount").innerHTML = texts.tableAmount;
-        document.querySelector("#tableValue").innerHTML = texts.tableValue;
-        document.querySelector("#tableAction").innerHTML = texts.tableAction;
+        document.querySelector("#tableDesc").innerHTML = configTexts.tableDesc;
+        document.querySelector("#tableAmount").innerHTML = configTexts.tableAmount;
+        document.querySelector("#tableValue").innerHTML = configTexts.tableValue;
+        document.querySelector("#tableAction").innerHTML = configTexts.tableAction;
 
     }
 
     if ( document.querySelector(".btnEdit") != undefined ){
 
-        document.querySelector(".btnEdit").innerHTML = texts.btnEdit;
-        document.querySelector(".btnDelete").innerHTML = texts.btnDelete;
+        document.querySelector(".btnEdit").innerHTML = configTexts.btnEdit;
+        document.querySelector(".btnDelete").innerHTML = configTexts.btnDelete;
     }
 
 
-    valueSignal = texts.valueSignal;
-    dotOut = texts.dotOut;
-    dotIn = texts.dotIn;
+    valueSignal = configTexts.valueSignal;
+    dotOut = configTexts.dotOut;
+    dotIn = configTexts.dotIn;
 }
 
 setConfig();

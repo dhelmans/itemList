@@ -179,7 +179,7 @@ function inputValidate(desc, amount, value) {
     let errorList = [];
 
     if (desc == "") {
-        errorList.push(`Description cannot be empty.`);
+        errorList.push("Description cannot be empty");
     }
 
     if (amount == "") {
