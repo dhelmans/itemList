@@ -44,8 +44,8 @@ function setList(list) {
                     <td>${parseInt(element.amount)}</td>
                     <td>${formatValue(element.value)}</td>
                     <td>
-                        <button class="btn btn-info m-1 btnEdit" onclick="setUpdate(${index})"></button>
-                        <button class="btn btn-danger btnDelete" onclick="delProduct(${index})"></button>
+                        <button class="btn btn-info mb-1" onclick="setUpdate(${index})"><img class="btnEdit" src="img/edit.ico" alt=""></button>
+                        <button class="btn btn-danger mb-1" onclick="delProduct(${index})"><img class="btnDelete" src="img/trash.ico" alt=""></button>
                     </td>
                 </tr>`;
     });
